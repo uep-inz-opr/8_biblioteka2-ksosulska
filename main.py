@@ -75,7 +75,7 @@ class Czytelnik:
 
 b = Biblioteka()
 
-n = int(input()[1:3])
+n = int(input()[])
 
 for i in range(0, n):
     k = eval(input())
