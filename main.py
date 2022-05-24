@@ -40,14 +40,11 @@ class Biblioteka:
                         egzemplarz.wypozyczony = True
                         czytelnik.egzemplarze[tytul] = egzemplarz
                         return True
-            
+            return False
 
     def oddaj(self, czytelnik, tytul):
-       
+
         pass
-        
-        self.ksiazki.append(ksiazka)
-        return True      
 
 
 class Ksiazka:
@@ -78,7 +75,7 @@ class Czytelnik:
 
 b = Biblioteka()
 
-n = int(input())
+n = int(input()[1:3])
 
 for i in range(0, n):
     k = eval(input())
