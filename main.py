@@ -40,15 +40,21 @@ class Biblioteka:
                         egzemplarz.wypozyczony = True
                         czytelnik.egzemplarze[tytul] = egzemplarz
                         return True
-            return False
+            
 
     def oddaj(self, czytelnik, tytul):
-        if tytul in czytelnik.egzemplarze:
-            czytelnik.egzemplarze[tytul].pop()
-            egzemplarz.wypozyczony = False
-        else:
-            return False
+       
+        for k in czytelnik.egzemplarze:
+            if k.tytul == tytul and k.autor == autor:
+                czytelnik.egzemplarze[tytul].pop()
+                egzemplarz.wypozyczony = False
+                return True
+            else:
+                return False
+
         
+        self.ksiazki.append(ksiazka)
+        return True      
 
 
 class Ksiazka:
