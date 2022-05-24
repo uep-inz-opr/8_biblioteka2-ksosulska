@@ -44,7 +44,7 @@ class Biblioteka:
 
     def oddaj(self, czytelnik, tytul):
         if tytul in czytelnik.egzemplarze:
-            czytelnik.egzemplarze.pop()
+            czytelnik.egzemplarze[tytul].pop()
             egzemplarz.wypozyczony = False
         else:
             return False
