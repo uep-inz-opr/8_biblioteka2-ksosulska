@@ -43,8 +43,12 @@ class Biblioteka:
             return False
 
     def oddaj(self, czytelnik, tytul):
-    
-        pass
+        if tytul in czytelnik.egzemplarze:
+            czytelnik.egzemplarze.pop()
+            egzemplarz.wypozyczony = False
+        else:
+            return False
+        
 
 
 class Ksiazka:
